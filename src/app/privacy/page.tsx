@@ -1,5 +1,7 @@
 import React from "react";
-
+<footer className="mt-8">
+  <a href="/privacy" className="text-blue-500 underline">Privacy Policy</a>
+</footer>
 const PrivacyPage = () => {
   return (
     <div style={{ padding: "40px", fontFamily: "sans-serif", lineHeight: "1.6" }}>
