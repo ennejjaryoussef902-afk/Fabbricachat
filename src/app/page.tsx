@@ -1,9 +1,6 @@
 "use client";
 export const dynamic = "force-dynamic";
 import AuthForm from "@/components/AuthForm";
-import { meta } from "@/lib/utils";
-
-
 
 export default function Home(): React.JSX.Element {
 	return (
