@@ -1,8 +1,5 @@
 "use client";
 export const dynamic = "force-dynamic";
-import { Metadata } from "next";
-import React from "react";
-
 import AuthForm from "@/components/AuthForm";
 import { meta } from "@/lib/utils";
 
