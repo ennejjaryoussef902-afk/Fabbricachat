@@ -95,7 +95,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 		const emailVerificationToken = jwt.sign({ email }, String(process.env.NEXTAUTH_SECRET) + email, {
 			expiresIn: "1d",
 		});
-		const url = `${String(process.env.NEXTAUTH_URL)}/verify?token=${emailVerificationToken}`;
+		const url = `${String("https://fabbricachat.vercel.app")}/verify?token=${emailVerificationToken}`;
 		const mailOptions = {
 			from: process.env.MAIL_USERNAME,
 			to: email,
