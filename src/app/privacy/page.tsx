@@ -4,7 +4,7 @@ const PrivacyPage = () => {
 	return (
 		<div style={{ padding: "40px", fontFamily: "sans-serif", lineHeight: "1.6" }}>
 			<h1>Informativa sulla Privacy di Fabbricachat</h1>
-			<p>Ultimo aggiornamento: 27 Dicembre 2025</p>
+			<p>aggiornamento il: 27 Dicembre 2025</p>
 
 			<h2>1. Dati Raccolti</h2>
 			<p>
