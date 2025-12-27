@@ -1,32 +1,25 @@
-"use client";
+// src/app/layout.tsx
 
-import "@/styles/globals.css";
-import { Inter } from "next/font/google";
-import { SessionProvider } from "next-auth/react";
-import { ThemeProvider } from "next-themes";
-import React from "react";
-import { RecoilRoot } from "recoil";
-import ActiveStatus from "@/components/ActiveContext";
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false, // Impedisce lo zoom accidentale su mobile
+}
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function RootLayout({ children }: { children: React.ReactNode }): React.JSX.Element {
-	return (
-		<html lang="en">
-			<head>
-				{/* Codice di verifica Google Search Console */}
-				<meta name="google-site-verification" content="eF9DTmRQ4OsHemaWs20G1oZ77FuWMoIfhTTczYWiDHY" />
-			</head>
-			<body className={`${inter.className}`}>
-				<SessionProvider>
-					<RecoilRoot>
-						<ThemeProvider attribute="class">
-							<ActiveStatus />
-							{children}
-						</ThemeProvider>
-					</RecoilRoot>
-				</SessionProvider>
-			</body>
-		</html>
-	);
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="it">
+      <body style={{ 
+        margin: 0, 
+        padding: 0, 
+        width: '100vw', 
+        height: '100dvh', // Altezza dinamica per adattarsi alle barre dei browser mobile
+        overflow: 'hidden', // Blocca lo scroll della pagina intera
+        backgroundColor: '#f0f2f5' 
+      }}>
+        {children}
+      </body>
+    </html>
+  );
 }
