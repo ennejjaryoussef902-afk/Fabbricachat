@@ -1,7 +1,5 @@
 import React from "react";
-<footer className="mt-8">
-  <a href="/privacy" className="text-blue-500 underline">Privacy Policy</a>
-</footer>
+
 const PrivacyPage = () => {
   return (
     <div style={{ padding: "40px", fontFamily: "sans-serif", lineHeight: "1.6" }}>
@@ -25,8 +23,8 @@ const PrivacyPage = () => {
         Utilizziamo tecnologie sicure per proteggere i tuoi messaggi e i dati del tuo profilo.
       </p>
       
-      <p>
-        <a href="/">Torna alla Homepage</a>
+      <p style={{ marginTop: "30px" }}>
+        <a href="/" style={{ color: "#0070f3", textDecoration: "underline" }}>Torna alla Homepage</a>
       </p>
     </div>
   );
